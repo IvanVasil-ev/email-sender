@@ -1,0 +1,17 @@
+<div class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden py-6 sm:py-12 bg-white">
+  <div class="max-w-xl px-5 text-center">
+    <h2 class="mb-2 text-[42px] font-bold text-zinc-800 flex justify-center items-center">
+      <%= image_tag 'done.gif', class: 'w-[45px] h-[45px] mr-3' %>
+      Unsubscribed
+      <%= image_tag 'done.gif', class: 'w-[45px] h-[45px] ml-3' %>
+    </h2>
+
+    <span class="mb-1 text-lg text-zinc-500">
+      You&apos;ve been unsubscribed from all newsletters for
+    </span>
+
+    <div>
+      <%= link_to '← Back to home page', root_path, class: "mt-3 inline-block w-96 rounded bg-indigo-600 px-5 py-3 font-medium text-white shadow-md shadow-indigo-500/20 hover:bg-indigo-700" %>
+    </div>
+  </div>
+</div>

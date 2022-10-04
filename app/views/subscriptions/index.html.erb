@@ -1,0 +1,43 @@
+<div class="flex flex-wrap min-h-screen w-full content-center justify-center bg-gray-200 py-10">
+  <div class="flex shadow-md">
+    <div
+      class="flex flex-wrap content-center justify-center rounded md:rounded-l-md md:rounded-none bg-white"
+      style="width: 24rem; height: 32rem;"
+    >
+      <div class="w-full px-10">
+        <h1 class="text-xl font-semibold">Hello there!</h1>
+        <small class="text-gray-400">
+          Please enter your details for subscribing to email newsletter.
+        </small>
+
+        <%= form_with do |f| %>
+          <div class="mt-4">
+            <div class="mb-3">
+              <%= f.label :first_name, 'First Name:', class: 'mb-2 block text-xs font-semibold'  %>
+              <%= f.text_field :first_name, placeholder: 'John', input_html: { minlength: 1 }, class: 'block w-full rounded-md border border-gray-300 focus:border-indigo-700 focus:outline-none focus:ring-1 focus:ring-indigo-700 py-1 px-2 text-gray-500' %>
+            </div>
+
+            <div class="mb-3">
+              <%= f.label :last_name, 'Last Name:', class: 'mb-2 block text-xs font-semibold' %>
+              <%= f.text_field :last_name, placeholder: 'Doe', class: 'block w-full rounded-md border border-gray-300 focus:border-indigo-700 focus:outline-none focus:ring-1 focus:ring-indigo-700 py-1 px-2 text-gray-500' %>
+            </div>
+
+            <div class="mb-12">
+              <%= f.label :email, 'Email:', class: 'mb-2 block text-xs font-semibold' %>
+              <%= f.email_field :email, placeholder: 'john.doe@example.com', class: 'block w-full rounded-md border border-gray-300 focus:border-indigo-700 focus:outline-none focus:ring-1 focus:ring-indigo-700 py-1 px-2 text-gray-500' %>
+            </div>
+
+            <%= f.submit 'Subscribe', class: 'mb-1.5 block w-full text-center text-white bg-indigo-700 hover:bg-indigo-900 active:bg-indigo-500 px-2 py-2 rounded-md cursor-pointer' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div
+      class="hidden md:flex flex-wrap content-center justify-center rounded-r-md"
+      style="width: 24rem; height: 32rem;"
+    >
+      <%= image_tag "subscribes_cat.jpeg", class: "w-full h-full bg-center bg-no-repeat bg-cover rounded-r-md" %>
+    </div>
+  </div>
+</div>
